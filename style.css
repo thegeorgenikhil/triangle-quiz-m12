@@ -91,6 +91,10 @@ a{
     display: inline-block;
 }
 
+.back-btn:hover{
+    text-decoration: underline;
+}
+
 
 .hypo-submit-btn{
     display: block;
@@ -135,4 +139,22 @@ a{
     width: 50%;
     margin: auto;
     background-color: #7b2cbf;
+}
+
+
+.quiz{
+    background-color:#580aff;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.question{
+    display: block;
+
+}
+
+.quiz label:not(.question){
+    margin: 0 1rem;
 }

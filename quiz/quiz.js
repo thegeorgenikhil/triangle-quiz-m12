@@ -1,9 +1,32 @@
-var quizDiv = document.querySelector(".question");
+var input = document.querySelectorAll("input");
+var submitBtn = document.querySelector("#btn")
+var outputDiv = document.querySelector(".result")
 
-var questionList = {
-    "1. If a triangle has angles 1350, 150, 300. Is it an obtuse triangle?":["yes","no"],
-    "2. If a triangle has angles 1150, 250, 400. Is it an acute triangle?":["yes","no"],
-    "3. If a triangle has angles 900, 600, 300. Is it a right angle triangle?":["yes","no"],
-    "4. A triangle has angles 600, 600, 600. Is it an equilateral triangle?":["yes","no"],
-    "5. If a triangle has angles 250, 750, 800. Is it an acute triangle?":["yes","no"],
+submitBtn.addEventListener("click",clickHandler)
+
+var answerList = ["answer1", "answer2", "answer1", "answer1", "answer1", "answer2", "answer2", "answer3", "answer3", "answer3" ];
+
+function clickHandler(){
+    var list = [];
+    for (var i = 0;i < input.length;i++){
+        if (input[i].checked == true){
+            list.push(input[i].value)
+        }
+    }
+    if (list.length === answerList.length){
+        var score = 0;
+        submitBtn.style.display = "none"
+        for (var i = 0; i < list.length;i++){
+            var questionId = "question"+(i+1)
+            var questionDiv = document.getElementById(questionId)
+            if (list[i] === answerList[i]){
+                questionDiv.style.backgroundColor = "green";
+                score ++;
+            }
+            else{
+                questionDiv.style.backgroundColor = "red";
+            }
+        }
+        outputDiv.innerHTML = "Your score is:" + score
+    }
 }
