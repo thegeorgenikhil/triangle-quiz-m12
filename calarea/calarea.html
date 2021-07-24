@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Area</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a7cf34d87a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="hero">
+      <a href="../index.html" class="back-btn">Go Back</a>  
+
+      <h1>Calculate Area</h1>
+      <h2>Select an option below as per the data you have for a triangle</h2>
+
+        <label for="base-height" class="area" >
+            <input type="radio" name="option" id="option1" value="base-height">
+            If you have base and height length
+        </label>
+  
+        <label for="three-side" class="area">
+            <input type="radio" name="option" id="option2" value="three-side">
+            If you have length of 3 sides
+        </label>
+
+        <label for="three-length" class="area">
+            <input type="radio" name="option" id="option3" value="two-side-angle">
+            If you have length of 2 sides and included angle
+        </label>
+
+        <button type="button" class="submit-btn" id="continue">continue</button>
+   
+
+      <div id="input-inteface" >
+        <div class="hidden" id="option-1" >
+            <img src="" alt="">
+            <label for="">base= <input type="number" min="0.01" step="0.01" name="" id="option-1-input-1" class="input"></label>
+            <label for="">height= <input type="number" name="" min="0.01" step="0.01" id="option-1-input-2" class="input"></label>
+            <h1>Area will be calculated here:</h1>
+            <div class="result">
+                <div class="area-output">Area= 1/2*base*height</div>
+            </div>
+            <button type="button" class="hypo-submit-btn">calculate</button>
+        </div> 
+
+        <div class="hidden" id="option-2">
+            <img src="" alt="">
+            <label for="">a= <input type="number" name="" min="0.01" step="0.01" id="option-2-input-1" class="input"></label>
+            <label for="">b= <input type="number" name="" min="0.01" step="0.01" id="option-2-input-2" class="input"></label>
+            <label for="">c= <input type="number" name="" min="0.01" step="0.01" id="option-2-input-3" class="input"></label>
+            <h1>Area will be calculated here:</h1>
+            <div class="result">
+                <div class="area-output">Area=  <span class="line">&Sqrt; s(s-a)(s-b)(s-c)</span></div>
+            </div>
+            <button type="button" class="hypo-submit-btn">calculate</button>
+        </div> 
+
+        <div class="hidden" id="option-3">
+            <img src="" alt="">
+            <label for="">b= <input type="number" min="0.01" step="0.01" name="" id="option-3-input-1" class="input"></label>
+            <label for="">c= <input type="number" name="" min="0.01" step="0.01" id="option-3-input-2" class="input"></label>
+            <label for="">A<sup>0</sup>= <input type="number" name=""  max="360" id="option-3-input-3" class="input"></label>
+            <h1>Area will be calculated here:</h1>
+            <div class="result">
+                <div class="area-output">Area= 1/2*b*c*sin(A)</div>
+            </div>
+            <button type="button" class="hypo-submit-btn">calculate</button>
+        </div>
+      </div>
+      
+
+      <footer>
+        <div class="link-div">
+            <a  class="social-links" href="https://twitter.com/thegeorgenikhil"><i class="fab fa-twitter"></i></a>
+            <a class="social-links"  href="https://nikhilgeorge.netlify.app/"><i class="fas fa-globe-americas"></i></a>
+            <a class="social-links"  href="https://github.com/thegeorgenikhil"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+      
+
+      <script src="calarea.js"></script>
+    </header>
+</body>
+</html>
