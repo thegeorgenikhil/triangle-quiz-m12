@@ -6,7 +6,7 @@
 
 checks whether the three angles given by the user satifies the conditions required for a triangle
 
-Live Site [App #1](https://lucky-or-not-m11.netlify.app/)
+Live Site [App #1](https://triangle-quiz.netlify.app/angle/aot.html)
 
 # #2 Check Hypotenuse
 
